@@ -550,6 +550,7 @@ _import_structure = {
     "models.vit": ["VIT_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTConfig"],
     "models.vit_hybrid": ["VIT_HYBRID_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTHybridConfig"],
     "models.vit_mae": ["VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMAEConfig"],
+    "models.vit_mae_3d": ["VITMAE3D_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMAE3DConfig"],
     "models.vit_msn": ["VIT_MSN_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMSNConfig"],
     "models.wav2vec2": [
         "WAV_2_VEC_2_PRETRAINED_CONFIG_ARCHIVE_MAP",
@@ -2781,6 +2782,15 @@ else:
             "ViTMAEPreTrainedModel",
         ]
     )
+    _import_structure["models.vit_mae_3d"].extend(
+        [
+            "VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "ViTMAE3DForPreTraining",
+            "ViTMAE3DLayer",
+            "ViTMAE3DModel",
+            "ViTMAE3DPreTrainedModel",
+        ]
+    )
     _import_structure["models.vit_msn"].extend(
         [
             "VIT_MSN_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -4421,6 +4431,7 @@ if TYPE_CHECKING:
     from .models.vit import VIT_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTConfig
     from .models.vit_hybrid import VIT_HYBRID_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTHybridConfig
     from .models.vit_mae import VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMAEConfig
+    from .models.vit_mae_3d import VITMAE3D_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMAE3DConfig
     from .models.vit_msn import VIT_MSN_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMSNConfig
     from .models.wav2vec2 import (
         WAV_2_VEC_2_PRETRAINED_CONFIG_ARCHIVE_MAP,
@@ -6271,6 +6282,13 @@ if TYPE_CHECKING:
             ViTMAELayer,
             ViTMAEModel,
             ViTMAEPreTrainedModel,
+        )
+        from .models.vit_mae_3d import (
+            VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST,
+            ViTMAE3DForPreTraining,
+            ViTMAE3DLayer,
+            ViTMAE3DModel,
+            ViTMAE3DPreTrainedModel,
         )
         from .models.vit_msn import (
             VIT_MSN_PRETRAINED_MODEL_ARCHIVE_LIST,
