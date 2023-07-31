@@ -1,4 +1,4 @@
-This is modified fork of huggingface/transformers with a new added model:
+This is a modified fork of huggingface/transformers with a new model added:
 * ViTMAE3D
 
 To install locally in a new virtual environment, please perform the following:
@@ -7,4 +7,5 @@ To install locally in a new virtual environment, please perform the following:
 3. `python3 -m venv .venv`
 4. `source .venv/bin/activate`
 5. `pip install -e .`
-6. Change directory to where your NMSS project files are, do `python3` to start an interactive python shell. `from transformers import ViTMAE3DConfig`. If there is no error, then success and you can start developing!
+6. Install `torch` and `monai`
+7. Change directory to where your NMSS project files are, do `python3` to start an interactive python shell. `from transformers import ViTMAE3DConfig`. If there is no error, then success and you can start developing!
