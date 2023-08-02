@@ -31,6 +31,7 @@ else:
     _import_structure["modeling_vit_mae_3d"] = [
         "VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST",
         "ViTMAE3DForPreTraining",
+        "ViTMAE3DForSegmentationPreTraining",
         "ViTMAE3DLayer",
         "ViTMAE3DModel",
         "ViTMAE3DPreTrainedModel",
@@ -48,6 +49,7 @@ if TYPE_CHECKING:
         from .modeling_vit_mae_3d import (
             VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST,
             ViTMAE3DForPreTraining,
+            ViTMAE3DForSegmentationPreTraining,
             ViTMAE3DLayer,
             ViTMAE3DModel,
             ViTMAE3DPreTrainedModel,

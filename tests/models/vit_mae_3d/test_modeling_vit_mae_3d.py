@@ -35,7 +35,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import ViTMAE3DForPreTraining, ViTMAE3DModel
+    from transformers import ViTMAE3DForPreTraining,ViTMAE3DForSegmentationPreTraining, ViTMAE3DModel
     from transformers.models.vit.modeling_vit import VIT_PRETRAINED_MODEL_ARCHIVE_LIST
 
 
@@ -160,7 +160,7 @@ class ViTMAE3DModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase
     attention_mask and seq_length.
     """
 
-    all_model_classes = (ViTMAE3DModel, ViTMAE3DForPreTraining) if is_torch_available() else ()
+    all_model_classes = (ViTMAE3DModel, ViTMAE3DForPreTraining, ViTMAE3DForSegmentationPreTraining) if is_torch_available() else ()
     test_pruning = False
     test_torchscript = False
     test_resize_embeddings = False

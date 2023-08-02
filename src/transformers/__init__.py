@@ -2786,6 +2786,7 @@ else:
         [
             "VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST",
             "ViTMAE3DForPreTraining",
+            "ViTMAE3DForSegmentationPreTraining",
             "ViTMAE3DLayer",
             "ViTMAE3DModel",
             "ViTMAE3DPreTrainedModel",
@@ -6286,6 +6287,7 @@ if TYPE_CHECKING:
         from .models.vit_mae_3d import (
             VITMAE3D_PRETRAINED_MODEL_ARCHIVE_LIST,
             ViTMAE3DForPreTraining,
+            ViTMAE3DForSegmentationPreTraining,
             ViTMAE3DLayer,
             ViTMAE3DModel,
             ViTMAE3DPreTrainedModel,
