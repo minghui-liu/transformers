@@ -206,6 +206,7 @@ from . import (
     vision_text_dual_encoder,
     visual_bert,
     vit,
+    vit3d,
     vit_hybrid,
     vit_mae,
     vit_mae_3d,

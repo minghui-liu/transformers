@@ -548,6 +548,7 @@ _import_structure = {
     "models.vision_text_dual_encoder": ["VisionTextDualEncoderConfig", "VisionTextDualEncoderProcessor"],
     "models.visual_bert": ["VISUAL_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "VisualBertConfig"],
     "models.vit": ["VIT_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTConfig"],
+    "models.vit3d": ["VIT3D_PRETRAINED_CONFIG_ARCHIVE_MAP", "Vit3dConfig"],
     "models.vit_hybrid": ["VIT_HYBRID_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTHybridConfig"],
     "models.vit_mae": ["VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMAEConfig"],
     "models.vit_mae_3d": ["VITMAE3D_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMAE3DConfig"],
@@ -932,6 +933,7 @@ else:
     _import_structure["models.videomae"].extend(["VideoMAEFeatureExtractor", "VideoMAEImageProcessor"])
     _import_structure["models.vilt"].extend(["ViltFeatureExtractor", "ViltImageProcessor", "ViltProcessor"])
     _import_structure["models.vit"].extend(["ViTFeatureExtractor", "ViTImageProcessor"])
+    _import_structure["models.vit3d"].extend(["Vit3dFeatureExtractor", "Vit3dImageProcessor"])
     _import_structure["models.vit_hybrid"].extend(["ViTHybridImageProcessor"])
     _import_structure["models.yolos"].extend(["YolosFeatureExtractor", "YolosImageProcessor"])
 
@@ -2765,6 +2767,15 @@ else:
             "ViTPreTrainedModel",
         ]
     )
+    _import_structure["models.vit3d"].extend(
+        [
+            "VIT3D_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "Vit3dForImageClassification",
+            "Vit3dForMaskedImageModeling",
+            "Vit3dModel",
+            "Vit3dPreTrainedModel",
+        ]
+    )
     _import_structure["models.vit_hybrid"].extend(
         [
             "VIT_HYBRID_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -4430,6 +4441,7 @@ if TYPE_CHECKING:
     from .models.vision_text_dual_encoder import VisionTextDualEncoderConfig, VisionTextDualEncoderProcessor
     from .models.visual_bert import VISUAL_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP, VisualBertConfig
     from .models.vit import VIT_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTConfig
+    from .models.vit3d import VIT3D_PRETRAINED_CONFIG_ARCHIVE_MAP, Vit3dConfig
     from .models.vit_hybrid import VIT_HYBRID_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTHybridConfig
     from .models.vit_mae import VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMAEConfig
     from .models.vit_mae_3d import VITMAE3D_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMAE3DConfig
@@ -4774,6 +4786,7 @@ if TYPE_CHECKING:
         from .models.videomae import VideoMAEFeatureExtractor, VideoMAEImageProcessor
         from .models.vilt import ViltFeatureExtractor, ViltImageProcessor, ViltProcessor
         from .models.vit import ViTFeatureExtractor, ViTImageProcessor
+        from .models.vit3d import Vit3dFeatureExtractor, Vit3dImageProcessor
         from .models.vit_hybrid import ViTHybridImageProcessor
         from .models.yolos import YolosFeatureExtractor, YolosImageProcessor
 
@@ -6270,6 +6283,13 @@ if TYPE_CHECKING:
             ViTForMaskedImageModeling,
             ViTModel,
             ViTPreTrainedModel,
+        )
+        from .models.vit3d import (
+            VIT3D_PRETRAINED_MODEL_ARCHIVE_LIST,
+            Vit3dForImageClassification,
+            Vit3dForMaskedImageModeling,
+            Vit3dModel,
+            Vit3dPreTrainedModel,
         )
         from .models.vit_hybrid import (
             VIT_HYBRID_PRETRAINED_MODEL_ARCHIVE_LIST,
